@@ -19,3 +19,20 @@ const cars = [
 	{ brand: "Mercedes", model: "Classe C", fuel: "elettrico" },
 	{ brand: "Peugeot", model: "208", fuel: "metano" },
 ];
+
+const benzina = [];
+const diesel = [];
+const rest = [];
+
+for (let i = 0; i < cars.length; i++) {
+	const current = cars[i];
+	if (current.fuel === "benzina") {
+		benzina.push(current);
+	} else if (current.fuel === "diesel") {
+		diesel.push(current);
+	} else {
+		rest.push(current);
+	}
+}
+
+console.log(benzina, diesel, rest);
