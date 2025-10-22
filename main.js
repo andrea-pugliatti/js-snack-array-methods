@@ -24,6 +24,7 @@ let benzina = [];
 let diesel = [];
 let rest = [];
 
+// Solution for loop
 for (let i = 0; i < cars.length; i++) {
 	const current = cars[i];
 	if (current.fuel === "benzina") {
@@ -37,6 +38,7 @@ for (let i = 0; i < cars.length; i++) {
 
 console.log(benzina, diesel, rest);
 
+// Solution filter
 benzina = cars.filter((current) => current.fuel === "benzina");
 diesel = cars.filter((current) => current.fuel === "diesel");
 rest = cars.filter(
