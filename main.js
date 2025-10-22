@@ -20,18 +20,18 @@ const cars = [
 	{ brand: "Peugeot", model: "208", fuel: "metano" },
 ];
 
-let benzina;
+let petrol;
 let diesel;
 let rest;
 
 // Solution for loop
-benzina = [];
+petrol = [];
 diesel = [];
 rest = [];
 for (let i = 0; i < cars.length; i++) {
 	const current = cars[i];
 	if (current.fuel === "benzina") {
-		benzina.push(current);
+		petrol.push(current);
 	} else if (current.fuel === "diesel") {
 		diesel.push(current);
 	} else {
@@ -39,27 +39,27 @@ for (let i = 0; i < cars.length; i++) {
 	}
 }
 
-console.log(benzina, diesel, rest);
+console.log(petrol, diesel, rest);
 
 // Solution filter
-benzina = [];
+petrol = [];
 diesel = [];
 rest = [];
-benzina = cars.filter((current) => current.fuel === "benzina");
+petrol = cars.filter((current) => current.fuel === "benzina");
 diesel = cars.filter((current) => current.fuel === "diesel");
 rest = cars.filter(
 	(current) => current.fuel !== "benzina" && current.fuel !== "diesel",
 );
 
-console.log(benzina, diesel, rest);
+console.log(petrol, diesel, rest);
 
 // Solution forEach
-benzina = [];
+petrol = [];
 diesel = [];
 rest = [];
 cars.forEach((current) => {
 	if (current.fuel === "benzina") {
-		benzina.push(current);
+		petrol.push(current);
 	} else if (current.fuel === "diesel") {
 		diesel.push(current);
 	} else {
@@ -67,4 +67,4 @@ cars.forEach((current) => {
 	}
 });
 
-console.log(benzina, diesel, rest);
+console.log(petrol, diesel, rest);
